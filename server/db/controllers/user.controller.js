@@ -85,6 +85,14 @@ const deletandoTudo = async (req, res) => {
   }
 };
 
+const acessandoInicio = async (req, res) => {
+  try {
+    res.send("o sistema está funcionando!");
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 module.exports = {
   procurandoDesignacao,
   criandoDesignacao,
@@ -95,4 +103,5 @@ module.exports = {
   deletandoDesignacao,
   atualizandoDesignacao,
   deletandoTudo,
+  acessandoInicio,
 };

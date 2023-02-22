@@ -17,6 +17,8 @@ const router = express.Router();
 const { Designacao } = require("../models/Modelos");
 const { Confirmado } = require("../models/Modelos");
 
+router.get("/", acessandoInicio);
+
 router.get("/designacao", procurandoDesignacao);
 
 router.post("/designacao", criandoDesignacao);
