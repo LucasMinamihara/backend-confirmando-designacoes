@@ -6,6 +6,8 @@ const cors = require("cors");
 const { urlencoded } = require("express");
 const { acessandoBanco } = require("./db/mongoose");
 
+app.use(cors());
+
 acessandoBanco();
 
 app.use(
@@ -15,8 +17,6 @@ app.use(
 );
 
 app.use(express.json());
-
-app.use(cors());
 
 app.use(router);
 
