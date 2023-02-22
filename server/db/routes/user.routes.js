@@ -10,6 +10,7 @@ const {
   deletandoDesignacao,
   atualizandoDesignacao,
   deletandoTudo,
+  acessandoInicio,
 } = require("../controllers/user.controller");
 
 const router = express.Router();
