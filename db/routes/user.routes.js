@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
 
-const {
+import {
   procurandoDesignacao,
   criandoDesignacao,
   retornandoConfirmacaoLucas,
@@ -11,12 +11,9 @@ const {
   atualizandoDesignacao,
   deletandoTudo,
   acessandoInicio,
-} = require("../controllers/user.controller");
+} from "../controllers/user.controller.js";
 
 const router = express.Router();
-
-const { Designacao } = require("../models/Modelos");
-const { Confirmado } = require("../models/Modelos");
 
 router.get("/", acessandoInicio);
 
@@ -38,4 +35,4 @@ router.put("/designacao/:id", atualizandoDesignacao);
 
 router.delete("/deletandoTudo", deletandoTudo);
 
-module.exports = router;
+export default router;

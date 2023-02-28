@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import { model } from "mongoose";
 
 const designacaoSchema = {
   tipo: String,
@@ -12,7 +12,7 @@ const confirmadoSchema = {
   confirmado: Boolean,
 };
 
-const Designacao = mongoose.model("Designacao", designacaoSchema);
-const Confirmado = mongoose.model("Confirmado", confirmadoSchema);
+const Designacao = model("Designacao", designacaoSchema);
+const Confirmado = model("Confirmado", confirmadoSchema);
 
-module.exports = { Designacao, Confirmado };
+export default { Designacao, Confirmado };

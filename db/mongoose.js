@@ -1,13 +1,12 @@
-const mongoose = require("mongoose");
-const dotenv = require("dotenv").config();
-const Person = require("./models/Modelos");
+import { connect } from "mongoose";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 function acessandoBanco() {
-  mongoose
-    .connect(process.env.DATABASE_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
+  connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
     .then(() => {
       console.log("Banco de dados conectado!");
     })
@@ -16,4 +15,4 @@ function acessandoBanco() {
     });
 }
 
-module.exports = { acessandoBanco };
+export default acessandoBanco;

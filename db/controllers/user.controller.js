@@ -1,5 +1,5 @@
-const { Designacao } = require("../models/Modelos");
-const { Confirmado } = require("../models/Modelos");
+import Designacao from "../models/Modelos.js";
+import Confirmado from "../models/Modelos.js";
 
 const procurandoDesignacao = async (req, res) => {
   try {
@@ -93,7 +93,7 @@ const acessandoInicio = async (req, res) => {
   }
 };
 
-module.exports = {
+export {
   procurandoDesignacao,
   criandoDesignacao,
   retornandoConfirmacaoLucas,

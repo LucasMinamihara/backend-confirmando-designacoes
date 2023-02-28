@@ -1,22 +1,22 @@
-const express = require("express");
+import express, { urlencoded as _urlencoded, json } from "express";
 const app = express();
-const router = require("./db/routes/user.routes");
+import router from "./db/routes/user.routes.js";
 const PORT = process.env.PORT || 3000;
-const cors = require("cors");
-const { urlencoded } = require("express");
-const { acessandoBanco } = require("./db/mongoose");
+import cors from "cors";
+import { urlencoded } from "express";
+import acessandoBanco from "./db/mongoose.js";
 
 app.use(cors());
 
 acessandoBanco();
 
 app.use(
-  express.urlencoded({
+  _urlencoded({
     extended: true,
   })
 );
 
-app.use(express.json());
+app.use(json());
 
 app.use(router);
 
