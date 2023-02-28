@@ -1,5 +1,5 @@
-import Designacao from "../models/Modelos.js";
-import Confirmado from "../models/Modelos.js";
+import { Designacao } from "../models/Modelos.js";
+import { Confirmado } from "../models/Modelos.js";
 
 const procurandoDesignacao = async (req, res) => {
   try {

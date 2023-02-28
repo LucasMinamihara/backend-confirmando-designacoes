@@ -15,4 +15,4 @@ const confirmadoSchema = {
 const Designacao = model("Designacao", designacaoSchema);
 const Confirmado = model("Confirmado", confirmadoSchema);
 
-export default { Designacao, Confirmado };
+export { Designacao, Confirmado };
